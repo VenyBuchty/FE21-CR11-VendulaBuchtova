@@ -86,7 +86,7 @@ $signs = array(
    echo $signs["Maggie"]["hair"]."<br/>";
   
 
-//Challenge
+
 
    
    
