@@ -60,9 +60,9 @@
         The area of the box is: 14
         The volume of the box is: 70 */
         function area($width, $height, $depth) {
-            $sum = "The area of the box is: " . ($width * $height) . "<br />";
-            $volume = "The volume of the box is: " . ($width * $height * $depth) . "<br />";
-            return $sum . $volume;
+            $sum = ($width * $height) ;
+            $volume = ($width * $height * $depth);
+            return "The area of the box is: " . $sum . "<br />" . "The volume of the box is: " . $volume . "<br />";
         }
         $areaResult = area(2, 7, 5);
         echo $areaResult;
@@ -73,8 +73,14 @@
         The function should accept only one argument.
         E.g. If we call the function and pass the number of minutes 200 we should get the message
          "200 minutes = 3 hour(s) and 20 minute(s)." */
-s
+        function converter($input){
+            $hours = round($input / 60);
+            $minutes = $input % 60;
+            return $input . " minutes = " . $hours ." hours and " . $minutes . " minutes.";
+        }
         
+        $converterResult = converter(200);
+        echo $converterResult;
 
         ?>
    </body> 
