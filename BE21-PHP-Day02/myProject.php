@@ -96,10 +96,23 @@
            First Name: <input type="text"   name="firstName" />
            Last Name: <input type ="text"  name="lastName" />
            Age: <input type ="text"  name="age" />
-           <input  type="submit"  name="submit2"  />
+           <input  type="submit"  name="button1"  />
         </form>
-        <?php 
-        if( isset($_POST['submit2'])) {
+
+       <form action= "myProject.php" method= "GET">
+           Hobbies: <input type="text"   name="hobbies" />
+           <input  type="submit"  name="button2" />
+        </form>
+       <?php
+       if(isset($_GET[ 'button2']))
+       {
+           if( $_GET["hobbies"] )
+           {
+               echo "You like to" . $_GET["hobbies"] . "<br/>";
+           }
+       }
+       
+        if( isset($_POST['button1'])) {
 
         $fName = $_POST[ 'firstName'];
         $lName = $_POST[ 'lastName'];
@@ -107,23 +120,25 @@
         
         if (strlen($fName) > 5) {
             echo '<div>
-                    <h5 class="text-success">$fName</h5>
+                    <h5 class="text-success">'. $fName. '</h5>
                     </div>';
         } else {
             echo '<div>
-                    <h5 class="text-danger">$fName</h5>
+                    <h5 class="text-danger">' . $fName . '</h5>
                     </div>';
         }
         
         if (strlen($lName) > 5) {
             echo '<div>
-                    <h5 class="text-success">$lName</h5>
+                    <h5 class="text-success">'. $fName. '</h5>
                     </div>';
         } else {
             echo '<div>
-                    <h5 class="text-danger">$lName</h5>
+                    <h5 class="text-danger">' . $lName . '</h5>
                     </div>';
         }
+
+            echo $age . "<br/>";
         }
         
         ?>
@@ -195,7 +210,7 @@
             }
         }
         
-        echo weather(23);
+        echo weather(17);
         
 
         ?>
