@@ -35,10 +35,10 @@
         // Create a function which takes two integer parameters - divide them and output the 
         //result on the screen.
         function divided($num1, $num2) {
-            return $num1 / $num2;
+            return $num1 / $num2 . "<br />";
         }
-        $result = divided(100, 5);
-        echo $result . "<br />"; 
+        echo divided(100, 5);
+        
         
 
 
@@ -49,8 +49,8 @@
             echo "Sum: " . ($gradeMath + $gradePhysics + $gradeEnglish) . "<br />";
             echo "Average: " . ($gradeMath + $gradePhysics + $gradeEnglish) / 3 . "<br />";
         }
-        $gradesResult = grades(3, 4, 5);
-        echo $gradesResult;
+        echo grades(3, 4, 5);
+        
 
 
         /* Create a function that calculates the area and volume of a box.
@@ -66,8 +66,8 @@
             $volume = ($width * $height * $depth);
             return "The area of the box is: " . $sum . "<br />" . "The volume of the box is: " . $volume . "<br />";
         }
-        $areaResult = area(2, 7, 5);
-        echo $areaResult;
+        echo area(2, 7, 5);
+        
 
 
         
@@ -81,8 +81,8 @@
             return $input . " minutes = " . $hours ." hours and " . $minutes . " minutes.";
         }
         
-        $converterResult = converter(200);
-        echo $converterResult;
+        echo converter(200);
+       
         ?>
         
 
@@ -105,10 +105,25 @@
         $lName = $_POST[ 'lastName'];
         $age = $_POST[ 'age'];
         
-        echo "<div>$fName</div>";
-        echo "<div>$lName</div>";
-        echo "<div>$age</div>";
-    
+        if (strlen($fName) > 5) {
+            echo '<div>
+                    <h5 class="text-success">$fName</h5>
+                    </div>';
+        } else {
+            echo '<div>
+                    <h5 class="text-danger">$fName</h5>
+                    </div>';
+        }
+        
+        if (strlen($lName) > 5) {
+            echo '<div>
+                    <h5 class="text-success">$lName</h5>
+                    </div>';
+        } else {
+            echo '<div>
+                    <h5 class="text-danger">$lName</h5>
+                    </div>';
+        }
         }
         
         ?>
@@ -124,8 +139,8 @@
             return $result . "<br/>";
         }
 
-        $converted = convertFahrenheit(30);
-        echo $converted;
+        echo convertFahrenheit(30);
+        
 
         ?>
 
@@ -180,8 +195,8 @@
             }
         }
         
-        $temperatur = weather(23);
-        echo $temperatur;
+        echo weather(23);
+        
 
         ?>
 
