@@ -1,13 +1,12 @@
 <?php
    require_once 'db_connect.php';
 
-if(isset($_POST["submit"])){ // if the input that has the type submit has a value (when clicked)
-        $dishID = $_POST["dishID"];
+if(isset($_POST["submit"])){ // if the input that has the type submit has a value (when clicked
         $img = $_POST["img"];
         $name = $_POST["name"]; // takes the value from the input whose name attribute is equals to first_name using the $POST method
         $price = $_POST["price"]; // takes the value from the input whose name attribute is equals to last_name
         $meal_desc = $_POST["meal_desc"];
-        $sql = "INSERT INTO dishes (dishID, img, name, price, meal_desc) VALUES ('$dishID', '$img', '$name', '$price', '$meal_desc')";
+        $sql = "INSERT INTO dishes (img, name, price, meal_desc) VALUES ('$img', '$name', '$price', '$meal_desc')";
                 // query that creates a new record in the table test. The values come from the form
 
        if(mysqli_query($connect, $sql) == true){ // if the query runs successfully it will show a message and a link to go back to the home page.
@@ -32,7 +31,6 @@ if(isset($_POST["submit"])){ // if the input that has the type submit has a valu
 </head>
 <body>
  <form method="post" >
-           <input type="text"  name="dishID" placeholder= "Type dish ID">
            <input type="text"  name="img" placeholder= "Type img src">
            <input type="text"  name="name" placeholder= "Type dish name">
            <input type="text"  name="price" placeholder= "Type price of dish">
