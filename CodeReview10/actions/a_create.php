@@ -18,11 +18,7 @@ if ($_POST) {
 
    if ($connect->query($sql) === true ) {
        $class = "success";
-       $message = "The entry below was successfully created<br>
-            <table class='table w-50'><tr>
-            <td> $title </td>
-            <td> $short_description </td>
-            </tr></table><hr>";
+       $message = "Media " . $title . " by " . $author_first_name . " " . $author_last_name . " was successfully created!";
    } else {
        $class = "danger";
        $message = "Error while creating record. Try again: <br>" . $connect->error;
@@ -54,6 +50,11 @@ if ($_POST) {
                 background-color: #FFFFCB;
                 color: black;
             }
+
+            .alert {
+               margin: 0 auto;
+               border-radius: 20px;
+           }
         </style>
    </head>
    <body>
@@ -75,8 +76,8 @@ if ($_POST) {
   </div>
 </nav>
        <div  class="container">
-            <div class="alert alert-<?=$class;?>" role="alert">
-               <p><?php echo ($message) ?? ''; ?></p>
+            <div class="text-center alert alert-<?=$class;?>" role="alert">
+               <p class="text-center fs-2"><?php echo ($message) ?? ''; ?></p>
                 <a href='../index.php'><button class="btn btn-edit" type='button'>Home</button></a>
            </div >
        </div>

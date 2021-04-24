@@ -6,18 +6,17 @@
         <title>Error</title>
         <?php require_once 'components/boot.php'?>
         <style>
-            
+            .alert {
+               margin: 0 auto;
+               border-radius: 20px;
+           }
         </style>    
     </head>
    <body>
         <?php require_once 'navbar.php'?>
-       <div  class="container">  
-          
-               <div class="mt-3 mb-3" >
-                    <h1>Invalid Request</h1> 
-                </div>
-                <div class="alert alert-warning" role="alert">
-                    <p>You've made an invalid request. Please <a href="index.php" class ="alert-link">go back</a> to index and try again.</p> 
+       <div  class="container">
+                <div class="text-center fs-2 alert alert-warning" role="alert">
+                    <p>You've made an invalid request. Please go <a href="index.php" class ="alert-link">back</a> and try again.</p> 
                 </div>
            
         </div>

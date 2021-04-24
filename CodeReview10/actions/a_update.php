@@ -49,6 +49,10 @@ if ($_POST) {
                 background-color: #FFFFCB;
                 color: black;
             }
+            .alert {
+               margin: 0 auto;
+               border-radius: 20px;
+           }
         </style>
     </head>
     <body>
@@ -69,8 +73,8 @@ if ($_POST) {
             </div>
             </nav>
         <div class="container">
-            <div class="alert alert-<?php echo $class;?>" role="alert">
-                <p><?php echo ($message) ?? ''; ?></p>
+            <div class="text-center alert alert-<?php echo $class;?>" role="alert">
+                <p class="text-center fs-2"><?php echo ($message) ?? ''; ?></p>
                 <a href='../update.php?ISBN_code=<?=$ISBN_code;?>'><button class="btn btn-outline-secondary" type='button'><i class="fas fa-reply"></i> Go Back</button></a>
                 <a href='../index.php'><button class="btn btn-edit" type='button'>Home</button></a>
             </div>

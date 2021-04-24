@@ -2,6 +2,7 @@
     .footer {
       background-color: #004056; 
     }
+    
 </style>
 <footer class="footer py-3 mt-4">
     <div class="container text-center">

@@ -63,7 +63,14 @@
                    </tr>
                    <tr>
                        <th>Media type: </th >
-                       <td><input class= 'form-control' type="text"  name="media_type" placeholder ="Book/CD/DVD"/></td>
+                            <td>
+                                <select class="form-select" name="media_type" aria-label="Default select example">
+                                    <option selected>Open this select menu</option>
+                                    <option value="Book">Book</option>
+                                    <option value="CD">CD</option>
+                                    <option value="DVD">DVD</option>
+                                </select>
+                            </td>
                    </tr>
                    <tr>
                        <th>Author first name: </th >
@@ -87,11 +94,24 @@
                    </tr>
                    <tr>
                        <th>Publisher size: </th >
-                       <td><input class= 'form-control' type="text"  name="publisher_size" placeholder ="small/medium/big"/></td>
+                       <td>
+                            <select class="form-select" name="publisher_size" aria-label="Default select example">
+                                    <option selected>Open this select menu</option>
+                                    <option value="small">small</option>
+                                    <option value="medium">medium</option>
+                                    <option value="big">big</option>
+                                </select>
+                        </td>
                    </tr>
                    <tr>
                        <th>Available: </th >
-                       <td><input class= 'form-control' type="text"  name="availability" placeholder ="available/reserved"/></td>
+                       <td>
+                                <select class="form-select" name="availability" aria-label="Default select example">
+                                    <option selected>Open this select menu</option>
+                                    <option value="available">Yes</option>
+                                    <option value="reserved">No</option>
+                                </select>
+                        </td>
                    </tr>     
                </table>
                 <div class="d-flex justify-content-center mb-4">

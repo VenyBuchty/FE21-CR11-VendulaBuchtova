@@ -87,7 +87,14 @@ if ($_GET['ISBN_code']) {
                    </tr>
                    <tr>
                        <th>Media type: </th >
-                       <td><input class= 'form-control' type="text"  name="media_type" placeholder ="Book/CD/DVD" value="<?php echo $media_type ?>"/></td>
+                            <td>
+                                <select class="form-select" name="media_type" aria-label="Default select example" value="<?php echo $media_type ?>"/>>
+                                    <option selected>Open this select menu</option>
+                                    <option value="Book">Book</option>
+                                    <option value="CD">CD</option>
+                                    <option value="DVD">DVD</option>
+                                </select>
+                            </td>
                    </tr>
                    <tr>
                        <th>Author first name: </th >
@@ -111,11 +118,24 @@ if ($_GET['ISBN_code']) {
                    </tr>
                    <tr>
                        <th>Publisher size: </th >
-                       <td><input class= 'form-control' type="text"  name="publisher_size" placeholder ="small/medium/big" value="<?php echo $publisher_size ?>"/></td>
+                       <td>
+                            <select class="form-select" name="publisher_size" aria-label="Default select example">
+                                    <option selected>Open this select menu</option>
+                                    <option value="small">small</option>
+                                    <option value="medium">medium</option>
+                                    <option value="big">big</option>
+                                </select>
+                       </td>
                    </tr>
                    <tr>
                        <th>Available: </th >
-                       <td><input class= 'form-control' type="text"  name="availability" placeholder ="available/reserved" value="<?php echo $availability ?>"/></td>
+                       <td>
+                           <select class="form-select" name="availability" aria-label="Default select example">
+                                    <option selected>Open this select menu</option>
+                                    <option value="available">Yes</option>
+                                    <option value="reserved">No</option>
+                                </select>
+                       </td>
                    </tr>   
                    <tr>
                        <input type= "hidden" name= "ISBN_code" value= "<?php echo $data['ISBN_code'] ?>" />
